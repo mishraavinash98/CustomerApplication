@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { CustomerComponent } from 
 './CustomerApp.component';
@@ -9,9 +10,10 @@ import { CustomerComponent } from
     CustomerComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,FormsModule
   ],
   providers: [],
   bootstrap: [CustomerComponent]
 })
 export class CustomerModule { }
+
