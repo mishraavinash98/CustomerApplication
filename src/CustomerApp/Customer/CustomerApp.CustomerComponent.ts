@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {Customer} from "./CustomerApp.model"
+import { Customer } from "./CustomerApp.model"
+import { BaseLogger } from '../Utility/CustomerApp.Logger';
 
 
 @Component({
@@ -10,6 +11,13 @@ export class CustomerComponent {
   CustomerModel : Customer =new Customer();
   CustomerModels : Array<Customer>=new Array<Customer>();
   
+  //Centralized dependency injection
+  Logobj : BaseLogger = null;
+  constructor(_logger : BaseLogger){
+    this.Logobj=_logger
+    this.Logobj.Log();
+  }
+
   Add(){
     this.CustomerModels.push(this.CustomerModel);
     this.CustomerModel =new Customer();
