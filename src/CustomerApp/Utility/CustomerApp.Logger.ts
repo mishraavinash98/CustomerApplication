@@ -23,7 +23,7 @@ export class DBLogger extends BaseLogger{
 }
 
 export class FileLogger extends BaseLogger{
-    override Log() {
+    override  Log() {
         console.log("Using File loggger");
     }
 }
