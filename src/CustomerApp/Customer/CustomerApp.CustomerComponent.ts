@@ -6,6 +6,7 @@ import { BaseLogger } from '../Utility/CustomerApp.Logger';
 @Component({
   templateUrl: './CustomerApp.CustomerView.html'
 })
+
 export class CustomerComponent {
   title = 'CustomerApplication';
   CustomerModel : Customer =new Customer();
@@ -18,6 +19,10 @@ export class CustomerComponent {
     this.Logobj.Log();
   }
 
+  SelectCustomer(_selected:Customer){
+    this.CustomerModel = _selected;
+  }
+  
   Add(){
     this.CustomerModels.push(this.CustomerModel);
     this.CustomerModel =new Customer();
